@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import Header from "./Components/Header.js";
-import Login from "./Pages/Login.js";
-import Map from "./Pages/Map.js";
-import Profile from "./Pages/Profile.js";
+import Header from "./Components/Header";
+import Login from "./Pages/Login";
+import Map from "./Pages/Map";
+import Profile from "./Pages/Profile";
+import Registration from "./Pages/Registration";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'login'
+      page: 'registration'
     };
   }
 	
@@ -26,6 +27,7 @@ class App extends React.Component {
         {page === 'map' && <Map/>}
         {page === 'profile' && <Profile/>}
         {page === 'login' && <Login setPage={this.setPage} />}
+        {page === 'registration' && <Registration setPage={this.setPage} />}
       </div>
     );
   }
