@@ -13,9 +13,18 @@ class Login extends Component {
     this.setState({login: event.target.value});
   }
 
+  onSubmit =(e) => {
+    const {setPage}  = this.props;
+  
+  e.preventDefault();
+
+  setPage ('map');
+
+  }
+
   render() {
     return (
-      <form onSubmit={this.onSubmit} to="/map">
+      <form onSubmit={this.onSubmit} >
         <p>
           <label>
              Логин: 

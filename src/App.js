@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import Header from "./components/Header";
+import Header from "./Components/Header.js";
 import Login from "./Pages/Login.js";
-import Map from "./pages/Map.js";
-import Profile from "./pages/Profile.js";
+import Map from "./Pages/Map.js";
+import Profile from "./Pages/Profile.js";
 
 class App extends React.Component {
   constructor(props) {
