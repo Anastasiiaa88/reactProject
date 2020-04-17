@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import Header from "./Components/Header";
+import Header from "./Components/Header";
 import Login from "./Pages/Login";
 import Map from "./Pages/Map";
 import Profile from "./Pages/Profile";
@@ -23,7 +23,7 @@ class App extends React.Component {
 	  
     return (
       <div className="App">
-        
+        {page === 'header' && <Header setPage={this.setPage} />}
         {page === 'map' && <Map setPage={this.setPage} />}
         {page === 'profile' && <Profile setPage={this.setPage} />}
         {page === 'login' && <Login setPage={this.setPage} />}
