@@ -34,13 +34,14 @@ class Registration extends Component {
   setPage ('map');
 
   }
-     
+
     render() {
+      const { setPage } = this.props;
       return (
-        <form onSubmit={this.onSubmit} to="/map">
-            <p>Регистрация</p>
+        <form onSubmit={this.onSubmit}>
+            <h2>Регистрация</h2>
             <p>Уже зарегистрированы?
-            <input type="submit" value="Войти" />
+            <Button onClick={() => setPage('login')}>Войти</Button>
             </p>
           <p>
             <label>
@@ -75,7 +76,7 @@ class Registration extends Component {
             </label>
          </p>
           <p>
-            <input type="submit" value="Войти" />
+          <Button type='submit'>Войти</Button>
          </p>
         </form>
       );

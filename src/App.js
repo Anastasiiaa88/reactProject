@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from "./Components/Header";
+// import Header from "./Components/Header";
 import Login from "./Pages/Login";
 import Map from "./Pages/Map";
 import Profile from "./Pages/Profile";
@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'registration'
+      page: 'login'
     };
   }
 	
@@ -23,9 +23,9 @@ class App extends React.Component {
 	  
     return (
       <div className="App">
-		{page !== 'login' && <Header setPage={this.setPage} />}
-        {page === 'map' && <Map/>}
-        {page === 'profile' && <Profile/>}
+        
+        {page === 'map' && <Map setPage={this.setPage} />}
+        {page === 'profile' && <Profile setPage={this.setPage} />}
         {page === 'login' && <Login setPage={this.setPage} />}
         {page === 'registration' && <Registration setPage={this.setPage} />}
       </div>

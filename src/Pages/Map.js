@@ -1,17 +1,19 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-undef */
 import React from 'react';
+import Header from "./Components/Header";
+
 
 class Map extends React.Component {
-    handleSubmit = (event) => {
-      event.preventDefault();
-    };
-    
     render() {
+      const { setPage } = this.props;
       return (
-        <div className="Map">
-         <h1>Карта</h1>
+        <div>
+         <Header setPage={setPage} />
+         <h2>Карта</h2>
         </div>
       );
     }
   }
 
-  export default Map;
+  export default Map; 
